@@ -10,7 +10,8 @@
     "compile": "tsc",
     "start": "node dist/index.js",
     "compile:watch": "tsc -w",
-    "dev": "nodemon src/index.ts && tsc -w"
+    "dev": "nodemon src/index.ts && tsc -w",
+    "build": "tsc && node dist/index.js"
   },
   "keywords": [],
   "author": "",
