@@ -10,6 +10,13 @@ dotenv.config();
 
 const app = express();
 
+app.get("/", (req: Request, res: Response) => {
+    res.status(200).json({
+        status: "success",
+        message: "Welcome to PayDay Bank API"
+    })
+});
+
 app.use(express.json());
 app.use(cors());
 // parse application/x-www-form-urlencoded
