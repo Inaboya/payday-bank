@@ -23,20 +23,12 @@ export const validateAccount = (data: IValidator) => {
         errors.accountName = "Account name must be between 2 and 30 characters";
     }
 
-    if (!Validator.isAlpha(accountName)) {
-        errors.accountName = "Account name must only contain letters";
-    }
-
     if (!Validator.isIn(accountType, Object.values(AccountType))) {
         errors.accountType = "Account type must be either Checking, Savings, Credit or Loan";
     }
 
     if (!Validator.isNumeric(balance.toString())) {
         errors.balance = "Balance must be a number";
-    }
-
-    if (!Validator.isISO8601(DOB)) {
-        errors.DOB = "Date of birth must be a valid date";
     }
 
     return {
