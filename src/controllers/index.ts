@@ -1,5 +1,5 @@
 import { database } from "../database";
-import { Request, Response } from "express-serve-static-core";
+import { Request, Response } from "express";
 import { validateAccount } from "../utils";
 
 export const resolveAccount = (req: Request, res: Response) => {
